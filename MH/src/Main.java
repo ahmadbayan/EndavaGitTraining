@@ -7,12 +7,12 @@ public class Main {
         int op = -1 ;
 
         System.out.println("\nEnter password : ");
-        String password = keyboard.next();
+        String password = keyboard.nextLine();
         int[] encryption = new int[password.length()];
 
         while(op != 0) {
 
-            System.out.println("1. Encrypt password and check encrypted array.\n2. Decrypt password using the output of the encrypted array.\n0. Terminate program");
+            System.out.println("\n1. Encrypt password and check encrypted array.\n2. Decrypt password using the output of the encrypted array.\n0. Terminate program");
             System.out.println("Choose option : ");
             op = keyboard.nextInt();
 
