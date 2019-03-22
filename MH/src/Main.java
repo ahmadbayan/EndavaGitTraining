@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+        Vulnerability v = new Vulnerability();
         Scanner keyboard = new Scanner(System.in);
         int op = -1 ;
 
@@ -17,10 +18,10 @@ public class Main {
             op = keyboard.nextInt();
 
             if(op == 1){
-                Vulnerability.encryptionMethod(password, encryption);
+                v.encryptionMethod(password, encryption);
             }
             else if (op == 2) {
-                Vulnerability.decryptionMethod(encryption);
+                v.decryptionMethod(encryption);
             }
             else if (op == 0) {
                 System.out.println("Program terminated.");
