@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class Vulnerability {
+public class LameEncryption {
 
 
     private Random r= new Random();
@@ -8,7 +8,6 @@ public class Vulnerability {
    // private static int k = 0;
     //array for prime rand numbers
     private static int ranPrime[];
-
 
     public int calcPrime(int n)
     {
@@ -27,6 +26,7 @@ public class Vulnerability {
     public int calcK(){
         int k=0;
         Random r = new Random();
+        //generating a random prime number
         while(calcPrime(k)!=1) {
             k = r.nextInt(1500);
         }
@@ -36,8 +36,9 @@ public class Vulnerability {
 
     public void encryptionMethod(String inputString , int outputAscii[]) {
 
-        //creating a random array of prime integers
+        //setting the size of the random array of prime integers
         ranPrime=new int[inputString.length()];
+        //assigning random prime numbers to ranPrime array
         for (int i = 0 ; i < inputString.length() ; i++)
             ranPrime[i]=calcK();
 
@@ -49,7 +50,6 @@ public class Vulnerability {
         for(int i = 0 ; i < inputString.length() ; i ++){
             System.out.print(outputAscii[i]+" ");
         }
-
     }
 
 
